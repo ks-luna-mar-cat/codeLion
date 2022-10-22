@@ -1,0 +1,15 @@
+from googletrans import Translator
+
+translator = Translator()
+
+
+sentence = input("Please enter the sentence you want to translate : ")
+dest = input("What language do you want to translate into? : ")
+
+result = translator.translate(sentence,dest)
+detected = translator.detect(sentence)
+
+print("=========== Result ===========")
+print(detected.lang,":",sentence)
+print(result.dest,":",result.text)
+print("=================================")
