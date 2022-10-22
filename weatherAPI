@@ -13,7 +13,7 @@ result = requests.get(api)
  
 data = json.loads(result.text)
  
-print(data["name"],"의 날씨입니다.")
+print(data["name"])
 print("Weather is ",data["weather"][0]["description"])
 print("Now temp is ",data["main"]["temp"])
 print("But feel like  ",data["main"]["feels_like"])
